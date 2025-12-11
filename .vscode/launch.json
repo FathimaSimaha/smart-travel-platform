@@ -19,6 +19,17 @@
             "mainClass": "com.travel.flight_service.FlightServiceApplication",
             "projectName": "flight-service",
             "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=56783 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=flight-service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HotelServiceApplication<hotel-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.travel.hotel_service.HotelServiceApplication",
+            "projectName": "hotel-service",
+            "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
     ]
