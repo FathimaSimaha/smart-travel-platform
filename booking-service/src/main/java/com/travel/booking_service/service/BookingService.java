@@ -9,9 +9,12 @@ import java.time.LocalDate;
 import java.util.Optional;
 import com.travel.booking_service.client.FlightClient;
 import com.travel.booking_service.client.HotelClient;
+import com.travel.booking_service.dto.FlightDto;
+import com.travel.booking_service.dto.HotelDto;
+
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-import java.time.LocalDateTime;    
+import java.time.LocalDateTime;
 
 @Service
 public class BookingService {
@@ -28,12 +31,30 @@ public class BookingService {
     private WebClient webClient;
 
     public Booking createPendingBooking(Long userId, Long flightId, Long hotelId, LocalDate travelDate) {
+        // Step 1: Validate user via WebClient
         if (!validateUser(userId)) {
-            throw new RuntimeException("Invalid user");
+            throw new RuntimeException("Invalid user ID: " + userId);
         }
+
+        // Step 2: Check flight availability via Feign
+        FlightDto flight = flightClient.getFlight(flightId);
+        if (flight == null || !flight.getAvailable()) {
+            throw new RuntimeException("Flight not available: " + flightId);
+        }
+
+        // Step 3: Check hotel availability via Feign
+        HotelDto hotel = hotelClient.getHotel(hotelId);
+        if (hotel == null || hotel.getRoomsAvailable() <= 0) {
+            throw new RuntimeException("Hotel not available: " + hotelId);
+        }
+
+        // Step 4: Calculate total cost
+        Double totalCost = flight.getPrice() + hotel.getPricePerNight();
+
+        // Step 5: Create and save PENDING booking
         Booking booking = new Booking(userId, flightId, hotelId, travelDate);
         booking.setStatus(BookingStatus.PENDING);
-        booking.setTotalCost(0.0);  // Placeholder
+        booking.setTotalCost(totalCost);
         return bookingRepository.save(booking);
     }
 
@@ -91,7 +112,7 @@ public class BookingService {
             // Parse response for paymentId (simple – assume first number)
             return Long.parseLong(response.split("\"id\":")[1].split(",")[0]);
         } catch (Exception e) {
-            return -1L;  // Failed
+            return -1L; // Failed
         }
     }
 
