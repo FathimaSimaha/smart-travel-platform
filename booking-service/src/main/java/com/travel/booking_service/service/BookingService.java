@@ -55,7 +55,31 @@ public class BookingService {
         Booking booking = new Booking(userId, flightId, hotelId, travelDate);
         booking.setStatus(BookingStatus.PENDING);
         booking.setTotalCost(totalCost);
-        return bookingRepository.save(booking);
+        Booking saved = bookingRepository.save(booking);
+
+        try {
+            System.out.println("Starting payment for booking ID: " + saved.getId()); // Optional log
+
+            // Step 6: Call Payment
+            Long paymentId = processPayment(saved.getId(), totalCost);
+            if (paymentId == -1L) {
+                throw new RuntimeException("Payment failed");
+            }
+
+            // Step 7: Call Notification
+            sendNotification(userId, "Booking confirmed for travel date " + travelDate + "! Total: $" + totalCost);
+
+            // Step 8: Update to CONFIRMED
+            updateStatus(saved.getId(), BookingStatus.CONFIRMED);
+            System.out.println("Booking confirmed: " + saved.getId()); // Optional log
+
+            // Return updated CONFIRMED booking
+            return bookingRepository.findById(saved.getId()).get();
+        } catch (Exception e) {
+            System.err.println("Flow failed for booking ID " + saved.getId() + ": " + e.getMessage());
+            updateStatus(saved.getId(), BookingStatus.CANCELLED); // Rollback to CANCELLED
+            throw e; // Propagate to controller for 400 response
+        }
     }
 
     public Optional<Booking> getBookingById(Long bookingId) {
