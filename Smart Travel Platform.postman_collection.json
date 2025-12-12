@@ -1,0 +1,1500 @@
+{
+  "info": {
+    "_postman_id": "0de2bff2-c990-431a-a789-5462781afc33",
+    "name": "Smart Travel Platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8080/api/bookings",
+      "id": "e3f5bae9-7995-4f45-91e6-03116b6a3c72",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings",
+      "id": "5ffc2545-1693-4de8-92b3-260e198269ec",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=999&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "999"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8081/api/users/1",
+      "id": "56722257-a149-45ab-b374-7d6701cad674",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/users/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8082/api/flights/1",
+      "id": "606964b3-f03e-40d9-934b-341cc136a4bd",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/flights/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "flights",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "90c34f09-3c56-4fef-90dd-831334a07975",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "29487566-261d-4259-ba6f-13fa081c6026",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "82ac2c7d-ceaf-4b71-9c07-c8ebeeae5c21",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "fd40c48d-f99b-4904-adc7-13116df61665",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+      "id": "766bf4b5-9804-4475-a069-c95c31efb6f9",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8085",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "message",
+              "value": "Booking%20confirmed!"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+      "id": "4b013f3d-78e2-491e-861b-ec50afec1e43",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8085",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "message",
+              "value": "Booking%20confirmed!"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+      "id": "a78cb8c7-0db8-494c-a4f4-2268f259406c",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8085",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "message",
+              "value": "Booking%20confirmed!"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8085/api/notifications?userId=1&message=Test%20notification",
+      "id": "3f10e024-ee37-4a94-931f-4e43d94ac92e",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8085/api/notifications?userId=1&message=Test%20notification",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8085",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "message",
+              "value": "Test%20notification"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+      "id": "db66c2cc-48f7-4133-b9a1-8abbaae5389f",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8085/api/notifications?userId=1&message=Booking%20confirmed!",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8085",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "message",
+              "value": "Booking%20confirmed!"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=200&hotelId=55&travelDate=2025-01-10",
+      "id": "90106a41-5530-4571-9236-5efe659131c3",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=200&hotelId=55&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "200"
+            },
+            {
+              "key": "hotelId",
+              "value": "55"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "f080635e-5c38-4c15-a908-d22e4b1e031c",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=1&amount=650.0",
+      "id": "7d38860f-1632-4223-b4db-559d6eb23e6e",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=1&amount=650.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "1"
+            },
+            {
+              "key": "amount",
+              "value": "650.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "60e8158e-670b-4c7e-8887-b35027c23216",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=999&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "b6c6248d-7c0a-4c6e-b0f0-d3136103ef94",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=999&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "999"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "f709291f-581a-4d73-9de3-cb0c09920e8d",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "a6188ab3-ddcd-4e2d-9058-7797d0290700",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "5df32e09-97bc-4570-81f1-4f129c508347",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "322e40cf-4681-4a3d-8113-0d747eaca398",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=999&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "3b08214c-aff0-4837-826c-3b2a25e5a762",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=999&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "999"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8081/api/users/2",
+      "id": "73bab84c-b508-4eb4-b4fa-5ecbb9c6e3f2",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/users/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "users",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8082/api/flights/1",
+      "id": "9b7a6c30-9431-417b-a78f-02d7843b1142",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/flights/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "flights",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "9dd509f4-473c-4288-8cdc-604cd934e5dd",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8085/api/notifications?userId=1&message=Order Confirmed!",
+      "id": "227f9a1c-06b7-46c2-819e-b9f9d6741631",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8085/api/notifications?userId=1&message=Order Confirmed!",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8085",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "message",
+              "value": "Order Confirmed!"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+      "id": "2ad08018-edbf-47eb-8daa-9e51cda418a2",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/bookings?userId=1&flightId=1&hotelId=1&travelDate=2025-01-10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            },
+            {
+              "key": "flightId",
+              "value": "1"
+            },
+            {
+              "key": "hotelId",
+              "value": "1"
+            },
+            {
+              "key": "travelDate",
+              "value": "2025-01-10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=1&amount=650.0",
+      "id": "6d900ee6-a025-4cc7-84fd-2d4ca24fbb65",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=1&amount=650.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "1"
+            },
+            {
+              "key": "amount",
+              "value": "650.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=1&amount=650.0",
+      "id": "c301599f-0020-4480-a708-2e4c6fe1c829",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=1&amount=650.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "1"
+            },
+            {
+              "key": "amount",
+              "value": "650.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=400.0",
+      "id": "c0f3d9a4-2d58-4086-915f-25f6d9f0968a",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=400.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "400.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=400.0",
+      "id": "ed2283d8-ff89-42c2-96d8-1a40aa74e2c1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=400.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "400.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8081/api/users/1",
+      "id": "931e6bec-e82a-4b7c-aae2-9ad2790b1004",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/users/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "bad6e564-85e1-4dea-a47c-e1debd924071",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+      "id": "875a84f2-a84f-4b4f-aa1a-6f8b03c232d6",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=300.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "300.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8084/api/payments?bookingId=2&amount=400.0",
+      "id": "4142fcb9-1b32-4e25-b0c4-699027f87021",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8084/api/payments?bookingId=2&amount=400.0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8084",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "bookingId",
+              "value": "2"
+            },
+            {
+              "key": "amount",
+              "value": "400.0"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
