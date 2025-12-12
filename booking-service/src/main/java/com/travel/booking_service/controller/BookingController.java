@@ -1,6 +1,7 @@
 package com.travel.booking_service.controller;
 
 import com.travel.booking_service.entity.Booking;
+import com.travel.booking_service.entity.BookingStatus;
 import com.travel.booking_service.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,5 +30,11 @@ public class BookingController {
         return bookingService.getBookingById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/confirm/{id}")
+    public ResponseEntity<String> confirmBooking(@PathVariable Long id) {
+        bookingService.updateStatus(id, BookingStatus.CONFIRMED);
+        return ResponseEntity.ok("Booking confirmed");
     }
 }

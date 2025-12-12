@@ -1,14 +1,11 @@
-package com.travel.payment_service;  // Fixed: camelCase, no underscore
+package com.travel.payment_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.boot.CommandLineRunner;
-import com.travel.payment_service.service.PaymentService;  // Import your service
+import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
-@Configuration  // Explicit for bean definitions
 public class PaymentServiceApplication {
 
     public static void main(String[] args) {
@@ -16,7 +13,7 @@ public class PaymentServiceApplication {
     }
 
     @Bean
-    public CommandLineRunner init(PaymentService paymentService) {
-        return args -> paymentService.createSamplePayments();
+    public WebClient webClient() {
+        return WebClient.builder().build();
     }
 }
