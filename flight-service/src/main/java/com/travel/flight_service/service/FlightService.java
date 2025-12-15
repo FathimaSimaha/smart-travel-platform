@@ -16,13 +16,11 @@ public class FlightService {
         return flightRepository.findById(flightId);
     }
 
-    // Seed test data
     public void createSampleFlights() {
         if (flightRepository.count() == 0) {
-            LocalDate sampleDate = LocalDate.of(2025, 1, 10);  // Matches booking example
+            LocalDate sampleDate = LocalDate.of(2025, 1, 10);  
             flightRepository.save(new Flight("New York", "London", sampleDate, 500.0));
             flightRepository.save(new Flight("Paris", "Tokyo", sampleDate, 800.0));
-            // Flight ID 200 for testing (manual if needed, or let auto-gen)
         }
     }
 }

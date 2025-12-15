@@ -15,12 +15,11 @@ public class UserService {
         return userRepository.findById(userId);
     }
 
-    // Bonus: Seed some test data on startup (optional, but helpful for testing)
-    // You can call this in a @PostConstruct in the main app class if needed
     public void createSampleUsers() {
         if (userRepository.count() == 0) {
-            userRepository.save(new User("Simaha Shariff", "simaha@example.com"));
+            userRepository.save(new User("Simaha Shariff", "sima@example.com"));
             userRepository.save(new User("Jane Smith", "jane@example.com"));
+            
         }
     }
 }

@@ -1,5 +1,5 @@
 # Smart Travel Booking Platform
-
+This project implements a scalable, distributed backend system for a travel booking platform, comprising six independent Spring Boot 3+ microservices. Inter-service communication adheres to modern standards, utilizing OpenFeign for declarative HTTP clients and Spring WebClient for reactive REST calls. The system avoids deprecated technologies such as RestTemplate, ensuring maintainability and performance. Each service operates on a dedicated port, leveraging in-memory H2 databases for development and testing.
 
 ## Services & Ports
 | Service | Port | Key Endpoint |
@@ -30,6 +30,6 @@
 - Screenshots: See /screenshots/ folder.
 
 ## Submission
-- GitHub Repo: [link].
+- GitHub Repo: https://github.com/FathimaSimaha/smart-travel-platform.git 
 - Postman JSON attached.
 - Screenshots of successful flow/errors.

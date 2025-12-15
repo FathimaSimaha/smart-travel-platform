@@ -12,10 +12,10 @@ public class Hotel {
     private Long id;
 
     @Column(nullable = false)
-    private String location;  // e.g., "London"
+    private String location;  
 
     @Column(nullable = false)
-    private String name;  // e.g., "Grand Hotel"
+    private String name;  
 
     @Column(nullable = false)
     private LocalDate checkInDate;

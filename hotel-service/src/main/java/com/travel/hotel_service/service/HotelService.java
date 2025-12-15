@@ -16,13 +16,11 @@ public class HotelService {
         return hotelRepository.findById(hotelId);
     }
 
-    // Seed test data
     public void createSampleHotels() {
         if (hotelRepository.count() == 0) {
-            LocalDate sampleDate = LocalDate.of(2025, 1, 10);  // Matches booking example
+            LocalDate sampleDate = LocalDate.of(2025, 1, 10);  
             hotelRepository.save(new Hotel("London", "Grand Hotel", sampleDate, 150.0));
             hotelRepository.save(new Hotel("Paris", "Eiffel Inn", sampleDate, 200.0));
-            // Hotel ID 55 for testing (auto-gen starts at 1; manual insert later if needed)
         }
     }
 }

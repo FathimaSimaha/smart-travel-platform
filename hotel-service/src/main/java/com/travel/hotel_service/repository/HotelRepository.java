@@ -7,5 +7,5 @@ import java.util.Optional;
 
 @Repository
 public interface HotelRepository extends JpaRepository<Hotel, Long> {
-    // No custom methods yet
+   
 }

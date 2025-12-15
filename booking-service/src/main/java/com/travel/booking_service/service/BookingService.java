@@ -31,27 +31,27 @@ public class BookingService {
     private WebClient webClient;
 
     public Booking createPendingBooking(Long userId, Long flightId, Long hotelId, LocalDate travelDate) {
-        // Step 1: Validate user via WebClient
+        
         if (!validateUser(userId)) {
             throw new RuntimeException("Invalid user ID: " + userId);
         }
 
-        // Step 2: Check flight availability via Feign
+        
         FlightDto flight = flightClient.getFlight(flightId);
         if (flight == null || !flight.getAvailable()) {
             throw new RuntimeException("Flight not available: " + flightId);
         }
 
-        // Step 3: Check hotel availability via Feign
+        
         HotelDto hotel = hotelClient.getHotel(hotelId);
         if (hotel == null || hotel.getRoomsAvailable() <= 0) {
             throw new RuntimeException("Hotel not available: " + hotelId);
         }
 
-        // Step 4: Calculate total cost
+      
         Double totalCost = flight.getPrice() + hotel.getPricePerNight();
 
-        // Step 5: Create and save PENDING booking
+        
         Booking booking = new Booking(userId, flightId, hotelId, travelDate);
         booking.setStatus(BookingStatus.PENDING);
         booking.setTotalCost(totalCost);
@@ -60,25 +60,25 @@ public class BookingService {
         try {
             System.out.println("Starting payment for booking ID: " + saved.getId()); // Optional log
 
-            // Step 6: Call Payment
+            
             Long paymentId = processPayment(saved.getId(), totalCost);
             if (paymentId == -1L) {
                 throw new RuntimeException("Payment failed");
             }
 
-            // Step 7: Call Notification
+            
             sendNotification(userId, "Booking confirmed for travel date " + travelDate + "! Total: $" + totalCost);
 
-            // Step 8: Update to CONFIRMED
+            
             updateStatus(saved.getId(), BookingStatus.CONFIRMED);
-            System.out.println("Booking confirmed: " + saved.getId()); // Optional log
+            System.out.println("Booking confirmed: " + saved.getId()); 
 
-            // Return updated CONFIRMED booking
+         
             return bookingRepository.findById(saved.getId()).get();
         } catch (Exception e) {
             System.err.println("Flow failed for booking ID " + saved.getId() + ": " + e.getMessage());
-            updateStatus(saved.getId(), BookingStatus.CANCELLED); // Rollback to CANCELLED
-            throw e; // Propagate to controller for 400 response
+            updateStatus(saved.getId(), BookingStatus.CANCELLED); 
+            throw e; 
         }
     }
 

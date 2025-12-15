@@ -14,7 +14,7 @@ public class PaymentService {
     @Autowired
     private WebClient webClient;
 
-    @Autowired  // ADD THIS LINE – missing before!
+    @Autowired 
     private PaymentRepository paymentRepository;
 
     public Payment processPayment(Long bookingId, Double amount) {
@@ -22,7 +22,7 @@ public class PaymentService {
         payment.setStatus(PaymentStatus.SUCCESS);
         Payment saved = paymentRepository.save(payment);
 
-        // Callback to Booking to confirm
+        
         try {
             webClient.post()
                     .uri("http://localhost:8080/api/bookings/confirm/{id}", bookingId)
